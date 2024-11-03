@@ -4,47 +4,25 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>@yield('title')</title>
 
+        <!-- Fonte do google -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto" rel="stylesheet">
+
+        <!-- CSS Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+        <!-- CSSS da aplicacao -->
         <link rel="stylesheet" href="/css/styles.css">
         <script src="/js/script.js"></script>
 
     </head>
     <body>
-        <h1>Hello Blade</h1>
-        <img src="/img/imagem1.png" alt="Alguma imagem">
-        @if(10 > 5)
-            <p>A condicao e true</p>
-        @endif
-
-        <p>{{ $nome }}</p>
-
-        @if($nome == "Pedro")
-        <p>O nome e Pedro</p>
-        @elseif($nome == "Simao")
-        <p>O nome e {{ $nome }} e ele tem {{ $idade }} anos, e ele trabalha como {{ $profissao }}</p>
-        @else
-        <p>O nome nao e Pedro</p>
-        @endif
-
-        @for($i = 0; $i < count($arr); $i++)
-            <p>{{ $arr[$i] }} - {{ $i }}</p>
-            @if($i == 2)
-            <p>O i e 2</p>
-            @endif
-        @endfor
-
-        @foreach($nomes as $nome)
-            <p>{{ $loop->index }}</p>
-            <p>{{ $nome }}</p>
-        @endforeach
-
-        @php
-            $name = "Maria";
-            echo $name; 
-        @endphp
-
-        <!-- Comentario html - nao aconselhado -->
-         {{-- Comentario com blade --}}
+        @yield('content')
+        <footer>
+            <p>HDC Events &copy; 2014</p>
+        </footer>
     </body>
 </html>

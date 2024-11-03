@@ -1,17 +1,11 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.main')
 
-        <title>Laravel</title>
+@section('title', 'HDC Events')
 
-        <link rel="stylesheet" href="/css/styles.css">
-        <script src="/js/script.js"></script>
+@section('content')
 
-    </head>
-    <body>
         <h1>Hello Blade</h1>
+        <h2>Renovado</h2>
         <img src="/img/imagem1.png" alt="Alguma imagem">
         @if(10 > 5)
             <p>A condicao e true</p>
@@ -46,5 +40,5 @@
 
         <!-- Comentario html - nao aconselhado -->
          {{-- Comentario com blade --}}
-    </body>
-</html>
+
+@endsection
