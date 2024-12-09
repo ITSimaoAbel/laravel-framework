@@ -27,3 +27,7 @@ Route::get('/contact', function () {
 Route::get('/produtos', function () {
     return view('products');
 });
+
+Route::get('/produtos_test/{id}', function ($id = null) {
+    return view('product', ['id' => $id]);
+});
