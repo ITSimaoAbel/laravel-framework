@@ -5,3 +5,65 @@
 #navbar img {
     width: 50px;
 }
+
+body {
+    min-height: 100vh;
+    padding-bottom: 100px;
+    position: relative;
+}
+
+header {
+    background-color: limegreen;
+    border-bottom: 1px solid #ccc;
+}
+
+#navbar {
+    justify-content: space-between;
+    /* ckground-color: #FFF; */
+    padding: 5px 0;
+}
+
+#navbar a {
+    font-size: 14px;
+    /* color: white; */
+}
+
+#navbar a:hover{
+    color: darkred;
+}
+
+footer {
+    text-align: center;
+    background-color: #353E48;
+    color: #FFF;
+    padding: 30px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin-bottom: 0;
+}
+
+/*Product page*/
+#producto-create-container{
+    padding: 30px;
+}
+
+#producto-create-container label{
+    font-weight: bold;
+}
+
+#producto-create-container input {
+    font-size: 12px;
+}
+ .msg {
+    background-color: #D4EDDA;
+    color: #155724;
+    border: 1px solid #C3E6cB;
+    width: 100%;
+    margin-bottom: 0;
+    text-align: center;
+    padding: 10px;
+ }
